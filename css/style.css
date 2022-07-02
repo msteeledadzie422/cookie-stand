@@ -1,0 +1,102 @@
+* {
+    font-family: 'Poiret One', cursive;
+    font-family: 'Balsamiq Sans', cursive;
+    font-family: 'Economica', sans-serif;
+    box-sizing: border-box;
+    --bg-color-1: #c0e9f7;
+    --highlight-color-1: #060e37;
+    --highlight-color-2: #060e37;
+    --highlight-color-3: #de1a0c;
+    --highlight-color-4: hsl(0, 0%, 43%);
+    --highlight-color-5: hsl(0, 17%, 92%);
+    list-style: none;
+}
+
+body {
+    background-color: var(--bg-color-1);
+    color: var(--highlight-color-4);
+    width: 90vw;
+    margin: 10% 10% 10% 10%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100vw;
+    background-color: var(--bg-color-1);
+}
+
+nav a {
+    display: inline-block;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #07ff45;
+}
+
+main {
+    margin-top: 12%;
+}
+
+table {
+    border: 3px solid var(--highlight-color-1);
+    background-color: var(--highlight-color-5);
+    width: calc(100% - 20px);
+    margin: 10px;
+    overflow-x: scroll;
+}
+
+h1 {
+    color: var(--highlight-color-2);
+    font: 400;
+    font-family: nixie one;
+    justify-self: left;
+    margin-left: 49px;
+}
+
+td, th, tr {
+    border: 3px solid var(--highlight-color-1);
+    padding: .5rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--highlight-color-3);
+    font-family: Arial, Helvetica, Verdana;
+}
+
+.store-location, 
+.total-title {
+    text-align: left;
+}
+
+.store-location, .totals, .heading, .total {
+    color: var(--highlight-color-3);  
+    font-family: nixie one;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.empty {
+    border: none;
+}
+
+:any-link {
+    color: var(--highlight-color-3);
+    font-weight: bold;
+    font-family: Poiret One;
+}
+
+#bottomimages {
+    display: flex;
+}
+
+.column {
+    flex: 16.66%;
+    padding: 5px;
+}
