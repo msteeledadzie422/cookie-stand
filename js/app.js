@@ -3,6 +3,7 @@
 let dailyTotalArray = [];
 let storeLocationArray = [];
 
+let submitForm = document.getElementById('newStoreForm');
 let tableEl = document.getElementById('salesprojections');
 
 function hourlyCookies(max, min, avg, open = 6, close = 19) {
@@ -125,3 +126,35 @@ function renderFooter() {
 renderHeader()
 renderStoreLocationArray()
 renderFooter()
+
+function logStore(e) {
+
+  e.preventDefault();
+  let userInput = e.target;
+  let store = userInput.store.value
+  let close = parseInt(userInput.close.value);
+  close += 12;
+  console.log(typeof (close))
+  let open = parseInt(userInput.open.value);
+  let avg = parseInt(userInput.avg.value);
+  let max = parseInt(userInput.max.value);
+  let min = parseInt(userInput.min.value);
+
+  new CookieShop(store, min, max, avg, open, close);
+  console.log(storeLocationArray)
+
+  let tableRows = document.querySelectorAll('tr')
+
+
+  for (let i = 0; i < (storeLocationArray.length + 1); i++) {
+      if (tableRows.length > 0) {
+          tableEl.deleteRow(0);
+      }
+  }
+
+  renderHeader()
+  renderStoreLocationArray()
+  renderFooter()
+}
+
+submitForm.addEventListener("submit", logStore);

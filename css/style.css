@@ -3,31 +3,39 @@
     font-family: 'Balsamiq Sans', cursive;
     font-family: 'Economica', sans-serif;
     box-sizing: border-box;
-    --bg-color-1: #c0e9f7;
+    --bg-color-1: #3bc9f8;
     --highlight-color-1: #060e37;
     --highlight-color-2: #060e37;
-    --highlight-color-3: #de1a0c;
+    --highlight-color-3: #3e7705;
     --highlight-color-4: hsl(0, 0%, 43%);
     --highlight-color-5: hsl(0, 17%, 92%);
     list-style: none;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: var(--bg-color-1);
     color: var(--highlight-color-4);
-    width: 90vw;
-    margin: 10% 10% 10% 10%;
-    display: grid;
-    grid-template-rows: 10% 90%;
+    margin: 3% 3% 3% 3%;
+}
+
+.locations {
+    float: left;
+}
+
+.bottomimages {
+    float: right;
 }
 
 nav {
-    position: fixed;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     overflow: hidden;
-    width: 100vw;
     background-color: var(--bg-color-1);
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 nav a {
@@ -41,16 +49,13 @@ nav a:hover {
     color: #07ff45;
 }
 
-main {
-    margin-top: 12%;
-}
-
 table {
     border: 3px solid var(--highlight-color-1);
     background-color: var(--highlight-color-5);
     width: calc(100% - 20px);
     margin: 10px;
     overflow-x: scroll;
+    margin-bottom: 25px;
 }
 
 h1 {
@@ -92,11 +97,61 @@ td, th, tr {
     font-family: Poiret One;
 }
 
-#bottomimages {
+form {
+    background-color: var(--bg-color-1);
+    border-color: var(--highlight-color-4);
+    color: var(--highlight-color-2);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
 }
 
-.column {
-    flex: 16.66%;
-    padding: 5px;
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+.label {
+    justify-self: left;
+}
+
+.input {
+    justify-self: right;
+}
+
+form > fieldset {
+    display: flex;
+    flex-direction:column;
+}
+
+#store, #avg, #min, #max, #open, #close {
+    width: 300px;
+}
+
+input[type="text"], input[type="number"], textarea, select {
+
+    background-color : var(--highlight-color-5); 
+    color: var(--bg-color-1);
+    font-weight: bold;
+    font-size: 1rem;
+  
+  }
+
+button {
+    background-color: var(--bg-color-1);
+    border: 3px solid var(--highlight-color-2);
+    border-radius: 200px;
+    color: var(--highlight-color-2);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 5px;
+    height: 3rem;
+    bottom: 5px;
+    grid-column: 2/3;
+    justify-self: center;
+    width: 200px;
 }

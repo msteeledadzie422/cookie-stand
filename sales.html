@@ -22,6 +22,24 @@
         <table id="salesprojections">
 
         </table>
+        <form name="form1" id="newStoreForm">
+            <fieldset>
+                <legend>New Store Submission</legend>
+                    <label class="label" for="store">Store Location</label>
+                    <input type="text" name="store" id="store" required>
+                    <label class="label"  for="avg">Average Purchase</label>
+                    <input type="number" name="avg" step="0.01" id="avg" required>
+                    <label class="label"  for="min">Min</label>
+                    <input type="number" name="min" id="min" required>
+                    <label class="label"  for="">Max</label>
+                    <input type="number" name="max" id="max" required>
+                    <label class="label"  for="">Opening Time</label>
+                    <input type="text" name="open" id="open" min="0" max="12" value="6am">
+                    <label class="label"  for="">Closing Time</label>
+                    <input type="text" class="input" name="close" id="close" min="0" max="12" value="8pm">
+                <button type="submit" id='input_submit'>Submit</button>
+            </fieldset>
+        </form>
     </main>
     <script src="js/app.js"></script>
 </body>
